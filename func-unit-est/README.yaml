@@ -1,0 +1,14 @@
+# YAML Configuration Files
+
+# General Structure:
+#   * technology  : class containing info for func_units for a specific technology
+#   * name        : technology name
+#   * func_unit   : class containing metrics for a particular func_unit
+  
+#  Metrics: int_power, switch_power, dynamic_power, dynamic_energy, leak_power, area
+#   * defined as either a float, relation to another tech, or calculation
+#   * if the input is a float, we directly use the value for the metric
+#   * ref : (func_unit object) refered technology
+#   * rel : (float) use <rel*ref.metric> as estimated value
+#   * calc: (str) explicit expression to calculate as estimated value
+#   * conf: (float) confidence level, metric value = (estimated value)*(1 +/- conf)
