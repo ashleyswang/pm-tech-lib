@@ -75,12 +75,3 @@ class FunctionalUnit:
 			out += "\n\t\t%s: %.2e" % (metric, getattr(self, metric))
 		return out
 
-
-# test = Technology("tester")
-# hi = test.add_unit("add")
-# print(hi)
-# print(test.add)
-# test.add.add_metric("high")
-# test.add.set_direct("high", .50)
-# print(hi.high)
-# print(test)
