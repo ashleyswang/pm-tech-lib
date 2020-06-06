@@ -1,0 +1,244 @@
+---
+technology:
+    name: cnfet
+    func_unit:
+        type: reg
+            int_power     : 
+                ref : cmos40_aladdin.reg
+                rel : 0.98
+                conf: 0.85
+            switch_power  :
+                ref : cmos40_aladdin.reg
+                rel : 0.35
+                conf: 0.90
+            dynamic_power : 
+                calc: self.int_power + self.switch_power
+                conf: 0.80
+            dynamic_energy: 
+                ref : cmos40_aladdin.reg
+                calc: (ref.dynamic_energy/ref.dynamic_power)*self.dynamic_power
+                conf: 0.85
+            leak_power    : 
+                ref : cmos40_aladdin.reg
+                rel : 0.01
+                conf: 0.85
+            area          : 
+                ref : cmos40_aladdin.reg
+                rel : 1.00
+                conf: 0.00
+        type: add
+            int_power     : 
+                ref : cmos40_aladdin.add
+                rel : 0.98
+                conf: 0.85
+            switch_power  :
+                ref : cmos40_aladdin.add
+                rel : 0.35
+                conf: 0.90
+            dynamic_power : 
+                calc: self.int_power + self.switch_power
+                conf: 0.80
+            dynamic_energy: 
+                ref : cmos40_aladdin.add
+                calc: (ref.dynamic_energy/ref.dynamic_power)*self.dynamic_power
+                conf: 0.85
+            leak_power    : 
+                ref : cmos40_aladdin.add
+                rel : 0.01
+                conf: 0.85
+            area          : 
+                ref : cmos40_aladdin.add
+                rel : 1.00
+                conf: 0.00
+        type: mul
+            int_power     : 
+                ref : cmos40_aladdin.mul
+                rel : 0.98
+                conf: 0.85
+            switch_power  :
+                ref : cmos40_aladdin.mul
+                rel : 0.35
+                conf: 0.90
+            dynamic_power : 
+                calc: self.int_power + self.switch_power
+                conf: 0.80
+            dynamic_energy: 
+                ref : cmos40_aladdin.mul
+                calc: (ref.dynamic_energy/ref.dynamic_power)*self.dynamic_power
+                conf: 0.85
+            leak_power    : 
+                ref : cmos40_aladdin.mul
+                rel : 0.01
+                conf: 0.85
+            area          : 
+                ref : cmos40_aladdin.mul
+                rel : 1.00
+                conf: 0.00
+        type: bit
+            int_power     : 
+                ref : cmos40_aladdin.bit
+                rel : 0.98
+                conf: 0.85
+            switch_power  :
+                ref : cmos40_aladdin.bit
+                rel : 0.35
+                conf: 0.90
+            dynamic_power : 
+                calc: self.int_power + self.switch_power
+                conf: 0.80
+            dynamic_energy: 
+                ref : cmos40_aladdin.bit
+                calc: (ref.dynamic_energy/ref.dynamic_power)*self.dynamic_power
+                conf: 0.85
+            leak_power    : 
+                ref : cmos40_aladdin.bit
+                rel : 0.01
+                conf: 0.85
+            area          : 
+                ref : cmos40_aladdin.bit
+                rel : 1.00
+                conf: 0.00
+        type: shift
+            int_power     : 
+                ref : cmos40_aladdin.shift
+                rel : 0.98
+                conf: 0.85
+            switch_power  :
+                ref : cmos40_aladdin.shift
+                rel : 0.35
+                conf: 0.90
+            dynamic_power : 
+                calc: self.int_power + self.switch_power
+                conf: 0.80
+            dynamic_energy: 
+                ref : cmos40_aladdin.shift
+                calc: (ref.dynamic_energy/ref.dynamic_power)*self.dynamic_power
+                conf: 0.85
+            leak_power    : 
+                ref : cmos40_aladdin.shift
+                rel : 0.01
+                conf: 0.85
+            area          : 
+                ref : cmos40_aladdin.shift
+                rel : 1.00
+                conf: 0.00
+        type: fpsp_add
+            int_power     : 
+                ref : cmos40_aladdin.fpsp_add
+                rel : 0.98
+                conf: 0.85
+            switch_power  :
+                ref : cmos40_aladdin.fpsp_add
+                rel : 0.35
+                conf: 0.90
+            dynamic_power : 
+                calc: self.int_power + self.switch_power
+                conf: 0.80
+            dynamic_energy: 
+                ref : cmos40_aladdin.fpsp_add
+                calc: (ref.dynamic_energy/ref.dynamic_power)*self.dynamic_power
+                conf: 0.85
+            leak_power    : 
+                ref : cmos40_aladdin.fpsp_add
+                rel : 0.01
+                conf: 0.85
+            area          : 
+                ref : cmos40_aladdin.fpsp_add
+                rel : 1.00
+                conf: 0.00
+        type: fpdp_add
+            int_power     : 
+                ref : cmos40_aladdin.fpdp_add
+                rel : 0.98
+                conf: 0.85
+            switch_power  :
+                ref : cmos40_aladdin.fpdp_add
+                rel : 0.35
+                conf: 0.90
+            dynamic_power : 
+                calc: self.int_power + self.switch_power
+                conf: 0.80
+            dynamic_energy: 
+                ref : cmos40_aladdin.fpdp_add
+                calc: (ref.dynamic_energy/ref.dynamic_power)*self.dynamic_power
+                conf: 0.85
+            leak_power    : 
+                ref : cmos40_aladdin.fpdp_add
+                rel : 0.01
+                conf: 0.85
+            area          : 
+                ref : cmos40_aladdin.fpdp_add
+                rel : 1.00
+                conf: 0.00
+        type: fpsp_mul
+            int_power     : 
+                ref : cmos40_aladdin.fpsp_mul
+                rel : 0.98
+                conf: 0.85
+            switch_power  :
+                ref : cmos40_aladdin.fpsp_mul
+                rel : 0.35
+                conf: 0.90
+            dynamic_power : 
+                calc: self.int_power + self.switch_power
+                conf: 0.80
+            dynamic_energy: 
+                ref : cmos40_aladdin.fpsp_mul
+                calc: (ref.dynamic_energy/ref.dynamic_power)*self.dynamic_power
+                conf: 0.85
+            leak_power    : 
+                ref : cmos40_aladdin.fpsp_mul
+                rel : 0.01
+                conf: 0.85
+            area          : 
+                ref : cmos40_aladdin.fpsp_mul
+                rel : 1.00
+                conf: 0.00
+        type: fpdp_mul
+            int_power     : 
+                ref : cmos40_aladdin.fpdp_mul
+                rel : 0.98
+                conf: 0.85
+            switch_power  :
+                ref : cmos40_aladdin.fpdp_mul
+                rel : 0.35
+                conf: 0.90
+            dynamic_power : 
+                calc: self.int_power + self.switch_power
+                conf: 0.80
+            dynamic_energy: 
+                ref : cmos40_aladdin.fpdp_mul
+                calc: (ref.dynamic_energy/ref.dynamic_power)*self.dynamic_power
+                conf: 0.85
+            leak_power    : 
+                ref : cmos40_aladdin.fpdp_mul
+                rel : 0.01
+                conf: 0.85
+            area          : 
+                ref : cmos40_aladdin.fpdp_mul
+                rel : 1.00
+                conf: 0.00
+        type: fp3s_trig
+            int_power     : 
+                ref : cmos40_aladdin.fp3s_trig
+                rel : 0.98
+                conf: 0.85
+            switch_power  :
+                ref : cmos40_aladdin.fp3s_trig
+                rel : 0.35
+                conf: 0.90
+            dynamic_power : 
+                calc: self.int_power + self.switch_power
+                conf: 0.80
+            dynamic_energy: 
+                ref : cmos40_aladdin.fp3s_trig
+                calc: (ref.dynamic_energy/ref.dynamic_power)*self.dynamic_power
+                conf: 0.85
+            leak_power    : 
+                ref : cmos40_aladdin.fp3s_trig
+                rel : 0.01
+                conf: 0.85
+            area          : 
+                ref : cmos40_aladdin.fp3s_trig
+                rel : 1.00
+                conf: 0.00

@@ -1,0 +1,74 @@
+---
+technology:
+    name: cmos40_aladdin
+    func_unit:
+        type: reg
+            int_power     : 7.94E-03
+            switch_power  : 1.06E-03
+            dynamic_power : 9.00E-03
+            dynamic_energy: 9.00E-03
+            leak_power    : 7.40E-05
+            area          : 5.98E+00
+        type: add
+            int_power     : 5.52E-02
+            switch_power  : 1.55E-01
+            dynamic_power : 2.10E-01
+            dynamic_energy: 2.10E-01
+            leak_power    : 2.25E-03
+            area          : 2.78E+02
+        type: mul
+            int_power     : 4.98E+00
+            switch_power  : 7.70E+00
+            dynamic_power : 1.27E+01
+            dynamic_energy: 1.27E+01
+            leak_power    : 7.79E-02
+            area          : 6.35E+03
+        type: bit
+            int_power     : 1.01E-02
+            switch_power  : 7.95E-03
+            dynamic_power : 1.81E-02
+            dynamic_energy: 1.81E-02
+            leak_power    : 6.11E-04
+            area          : 5.04E+01
+        type: shift
+            int_power     : 8.16E-02
+            switch_power  : 3.36E-01
+            dynamic_power : 4.17E-01
+            dynamic_energy: 4.17E-01
+            leak_power    : 1.70E-03
+            area          : 2.50E+02
+        type: fpsp_add
+            int_power     : 2.54E+00
+            switch_power  : 3.02E+00
+            dynamic_power : 5.56E+00
+            dynamic_energy: 1.67E+01
+            leak_power    : 5.31E-02
+            area          : 4.36E+03
+        type: fpdp_add
+            int_power     : 6.53E+00
+            switch_power  : 8.05E+00
+            dynamic_power : 1.46E+01
+            dynamic_energy: 4.38E+01
+            leak_power    : 1.33E-01
+            area          : 9.88E+03
+        type: fpsp_mul
+            int_power     : 5.05E+00
+            switch_power  : 6.72E+00
+            dynamic_power : 1.18E+01
+            dynamic_energy: 3.53E+01
+            leak_power    : 1.20E-01
+            area          : 8.97E+03
+        type: fpdp_mul
+            int_power     : 1.54E+01
+            switch_power  : 2.25E+01
+            dynamic_power : 3.79E+01
+            dynamic_energy: 1.14E+02
+            leak_power    : 2.76E-01
+            area          : 2.23E+04
+        type: fp3s_trig
+            int_power     : 1.75E-01
+            switch_power  : 3.55E-01
+            dynamic_power : 5.29E-01
+            dynamic_energy: 1.59E+01
+            leak_power    : 1.04E-01
+            area          : 1.06E+04
